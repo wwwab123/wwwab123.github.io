@@ -10,17 +10,22 @@ jobs:
           persist-credentials: false
       - name: clone
         run: |
+          git clone https://github.com/wwwab123/wwwab123.github.io.git git/
           git clone -b main --single-branch https://github.com/wwwab123/wwwab123.github.io.git main/
           git clone -b others --single-branch https://github.com/wwwab123/wwwab123.github.io.git others/
           cd others
           rm -r .git
           cd ..
           cp -r others/* main/
+          cd main
+          rm -r .git
+          cp main/* git/
         env:
           CI: false
       - name: git_config_and_commit_files
         run: |
-          cd main
+          cd git
+          git pull origin main
           git config --global user.email "admin@email.com"
           git config --global user.name "wwwab's robot"
           git add .
