@@ -10,14 +10,17 @@ jobs:
           persist-credentials: false
       - name: clone
         run: |
-          git clone -b others --single-branch https://github.com/wwwab123/wwwab123.github.io.git
+          git clone -b main --single-branch https://github.com/wwwab123/wwwab123.github.io.git main/
+          git clone -b others --single-branch https://github.com/wwwab123/wwwab123.github.io.git others/
+          cp -r others/* main/
         env:
           CI: false
       - name: git_config_and_commit_files
         run: |
+          cd main/
           git config --global user.email "admin@email.com"
           git config --global user.name "wwwab's robot"
-          git add .
+          git add main/
           git commit --allow-empty-message -m ""
       - name: push_changes
         uses: ad-m/github-push-action@master
