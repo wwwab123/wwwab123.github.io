@@ -15,9 +15,9 @@ jobs:
           CI: false
       - name: git_config_and_commit_files
         run: |
-          cd main/
           git config --global user.email "admin@email.com"
           git config --global user.name "wwwab's robot"
+          git add .
           git commit --allow-empty-message -m ""
       - name: push_changes
         uses: ad-m/github-push-action@master
