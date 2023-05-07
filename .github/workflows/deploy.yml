@@ -4,14 +4,23 @@ jobs:
   others:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        with:
+          persist-credentials: false
       - name: clone
         run: |
           git clone -b others --single-branch https://github.com/wwwab123/wwwab123.github.io.git
         env:
           CI: false
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+      - name: git_config_and_commit_files
+        run: |
+          cd main/
+          git config --global user.email "admin@email.com"
+          git config --global user.name "wwwab's robot"
+          git commit --allow-empty-message -m ""
+      - name: push_changes
+        uses: ad-m/github-push-action@master
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: main # The branch the action should deploy to.
-          FOLDER: public # The folder the action should deploy.
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            branch: main
