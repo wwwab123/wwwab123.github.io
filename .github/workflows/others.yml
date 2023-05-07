@@ -20,7 +20,7 @@ jobs:
           cd main
           rm -r .git
           cd ..
-          cp main/* git/
+          cp -r main/* git/
         env:
           CI: false
       - name: git_config_and_commit_files
