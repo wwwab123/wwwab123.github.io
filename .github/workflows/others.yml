@@ -12,6 +12,9 @@ jobs:
         run: |
           git clone -b main --single-branch https://github.com/wwwab123/wwwab123.github.io.git main/
           git clone -b others --single-branch https://github.com/wwwab123/wwwab123.github.io.git others/
+          cd others
+          rm -r .git
+          cd ..
           cp -r others/* main/
         env:
           CI: false
