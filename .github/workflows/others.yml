@@ -19,6 +19,7 @@ jobs:
           cp -r others/* main/
           cd main
           rm -r .git
+          cd ..
           cp main/* git/
         env:
           CI: false
