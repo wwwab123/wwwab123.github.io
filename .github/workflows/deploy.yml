@@ -1,0 +1,17 @@
+﻿name: others
+on: [push]
+jobs:
+  others:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone
+        run: |
+          git clone -b others --single-branch https://github.com/wwwab123/wwwab123.github.io.git
+        env:
+          CI: false
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: main # The branch the action should deploy to.
+          FOLDER: public # The folder the action should deploy.
