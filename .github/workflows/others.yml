@@ -1,5 +1,5 @@
 ﻿name: others
-on: [push]
+on: [page_build]
 jobs:
   others:
     runs-on: ubuntu-latest
