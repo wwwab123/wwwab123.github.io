@@ -232,10 +232,10 @@ post_meta:
 # wordcount (字數統計)
 # see https://butterfly.js.org/posts/ceeb73f/#字數統計
 wordcount:
-  enable: false
+  enable: true
   post_wordcount: true
   min2read: true
-  total_wordcount: true
+  total_wordcount: false
 
 # Display the article introduction on homepage
 # 1: description
@@ -344,7 +344,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  use: Valine
+  use: #Valine
   text: false # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -384,10 +384,10 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  appId: 2GQH9OUgsJFJNzoUjTSDC0rK-MdYXbMMI # leancloud application app id
-  appKey: 2jAwUMKLE7ZhDpUyegAV76JX # leancloud application app key
-  avatar: monsterid # gravatar style https://valine.js.org/#/avatar
-  serverURLs: https://2gqh9oug.api.lncldglobal.com/ # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
+  appId: # 2GQH9OUgsJFJNzoUjTSDC0rK-MdYXbMMI # leancloud application app id
+  appKey: # 2jAwUMKLE7ZhDpUyegAV76JX # leancloud application app key
+  avatar: # monsterid # gravatar style https://valine.js.org/#/avatar
+  serverURLs: # https://2gqh9oug.api.lncldglobal.com/ # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: # valine background
   visitor: false
   option:
