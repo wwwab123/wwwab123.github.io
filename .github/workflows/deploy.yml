@@ -12,6 +12,7 @@ jobs:
         run: |
           yarn
           npm run build
+          npm install hexo-wordcount --save
         env:
           CI: false
       - name: Deploy 🚀
