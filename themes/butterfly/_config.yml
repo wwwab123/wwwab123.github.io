@@ -499,7 +499,7 @@ messenger:
 footer:
   owner:
     enable: true
-    since: 2023
+    since: 2024
   custom_text: Thank you for your visit
   copyright: false # Copyright of theme and framework
 
@@ -520,7 +520,7 @@ cloudflare_analytics:
 
 # Microsoft Clarity
 # https://clarity.microsoft.com/
-microsoft_clarity:
+microsoft_clarity: kooq9kbhu3
 
 # Advertisement
 # --------------------------------------
