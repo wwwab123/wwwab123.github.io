@@ -1,5 +1,5 @@
 ﻿name: others
-on: [push]
+on: workflow_dispatch
 jobs:
   others:
     runs-on: ubuntu-latest
