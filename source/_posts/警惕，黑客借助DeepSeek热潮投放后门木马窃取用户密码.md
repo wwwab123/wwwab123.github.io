@@ -16,13 +16,13 @@ tags:
 ![](https://bbs.huorong.cn/data/attachment/forum/202502/14/173519r1qwnwz9uwtb3iiu.png)
 
 同时，我们发现黑客的GitHub账户上有多个类似的仓库，均在几个月或几周前上传了恶意软件，如下图所示：
-![](https://bbs.huorong.cn/data/attachment/forum/202502/14/173543tomzgzny76ybzqov.png)
+![](https://bbs.huorong.cn/data/attachment/forum/202502/14/173543tomzgzny76ybzqov.jpg)
 
 
 # 样本分析
 
 `Install_DeepSeek.exe`的主要行为是下载`https://github.com/nvslks/g/raw/refs/heads/g/g.zip`，如下图所示：
-![](![](https://bbs.huorong.cn/data/attachment/forum/202502/14/173634f27e5heu6xe67w5w.png)
+![](https://bbs.huorong.cn/data/attachment/forum/202502/14/173634f27e5heu6xe67w5w.png)
 
 在`https://github.com/nvslks/g`仓库中有一个`Bind.exe`，经过分析后确认行为与上述`Install_DeepSeek.exe`基本一致，如下图所示：
 ![](https://bbs.huorong.cn/data/attachment/forum/202502/14/173659xo6oyc7wazw6c5ic.png)
