@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,viewport-fit=cover"><title>警惕，黑客借助DeepSeek热潮投放后门木马窃取用户密码 | wwwab的小站</title><meta name="author" content="wwwab"><meta name="copyright" content="wwwab"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="背景在日常样本巡逻中，我们在今天发现了一个名为Install_DeepSeek.exe的可疑样本在传播，如下图所示： 该样本打着DeepSeek的图标，无有效数字签名，pdb路径为C:\Users\Administrator\source\repos\Bind\Bind\obj\Release\Bind.pdb，这引起了我们的警觉和怀疑，如下图所示： 经过分析，我们确定，该样本会从黑客GitHub">
+<meta property="og:type" content="article">
+<meta property="og:title" content="警惕，黑客借助DeepSeek热潮投放后门木马窃取用户密码">
+<meta property="og:url" content="https://wwwab123.github.io/posts/3265751015.html">
+<meta property="og:site_name" content="wwwab的小站">
+<meta property="og:description" content="背景在日常样本巡逻中，我们在今天发现了一个名为Install_DeepSeek.exe的可疑样本在传播，如下图所示： 该样本打着DeepSeek的图标，无有效数字签名，pdb路径为C:\Users\Administrator\source\repos\Bind\Bind\obj\Release\Bind.pdb，这引起了我们的警觉和怀疑，如下图所示： 经过分析，我们确定，该样本会从黑客GitHub">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wwwab123.github.io/picture/23.jpg">
+<meta property="article:published_time" content="2025-02-14T04:00:00.000Z">
+<meta property="article:modified_time" content="2025-02-15T06:47:51.053Z">
+<meta property="article:author" content="wwwab">
+<meta property="article:tag" content="wwwab">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wwwab123.github.io/picture/23.jpg"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://wwwab123.github.io/posts/3265751015.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//www.clarity.ms"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?70309904775ecbf0c2366bc1bbc874c5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "kooq9kbhu3");</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"作者: wwwab","link":"链接: ","source":"来源: wwwab的小站","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '警惕，黑客借助DeepSeek热潮投放后门木马窃取用户密码',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-02-15 14:47:51'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><link rel="stylesheet" href="/css/custom.css"><span id="fps"></span><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/png.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/picture/23.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="wwwab的小站"><span class="site-name">wwwab的小站</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">警惕，黑客借助DeepSeek热潮投放后门木马窃取用户密码</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-02-14T04:00:00.000Z" title="发表于 2025-02-14 12:00:00">2025-02-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-15T06:47:51.053Z" title="更新于 2025-02-15 14:47:51">2025-02-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="警惕，黑客借助DeepSeek热潮投放后门木马窃取用户密码"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>在日常样本巡逻中，我们在今天发现了一个名为<code>Install_DeepSeek.exe</code>的可疑样本在传播，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/172639de4fohezds6eohfa.png"></p>
+<p>该样本打着DeepSeek的图标，无有效数字签名，pdb路径为<code>C:\Users\Administrator\source\repos\Bind\Bind\obj\Release\Bind.pdb</code>，这引起了我们的警觉和怀疑，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/172651we9eesxh1uae7eus.png"></p>
+<p>经过分析，我们确定，该样本会从黑客GitHub仓库中下载多层脚本和下载者，嵌套下载，最终通过下载得到一个使用Python编写的恶意脚本用于执行后门行为并窃取密码。截至本文撰写时该py脚本首次在VirusTotal多引擎扫描平台上传并扫描，静态检出率为0%，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/173519r1qwnwz9uwtb3iiu.png"></p>
+<p>同时，我们发现黑客的GitHub账户上有多个类似的仓库，均在几个月或几周前上传了恶意软件，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/173543tomzgzny76ybzqov.png"></p>
+<h1 id="样本分析"><a href="#样本分析" class="headerlink" title="样本分析"></a>样本分析</h1><p><code>Install_DeepSeek.exe</code>的主要行为是下载<code>https://github.com/nvslks/g/raw/refs/heads/g/g.zip</code>，如下图所示：<br><img src="/!%5B%5D(https:/bbs.huorong.cn/data/attachment/forum/202502/14/173634f27e5heu6xe67w5w.png"></p>
+<p>在<code>https://github.com/nvslks/g</code>仓库中有一个<code>Bind.exe</code>，经过分析后确认行为与上述<code>Install_DeepSeek.exe</code>基本一致，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/173659xo6oyc7wazw6c5ic.png"></p>
+<p>我们将<code>g.zip</code>下载后分析，发现里面压缩了一个<code>g.bat</code>，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/173841ctbsrmaspmsislq1.png"></p>
+<p><code>g.bat</code>的行为依次是：</p>
+<ol>
+<li>下载<code>https://github.com/nvslks/g/raw/refs/heads/g/1.zip</code></li>
+<li>将下载到的文件保存为<code>%TEMP%\4g5h790g2345h7890g2345h90g2345h-890v2345hf789-3v5h.zip</code></li>
+<li>使用PowerShell解压缩<code>%TEMP%\4g5h790g2345h7890g2345h90g2345h-890v2345hf789-3v5h.zip</code>至<code>%TEMP%</code></li>
+<li>隐藏执行PowerShell，启动<code>%TEMP%\1.bat</code>，然后退出<br>如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/174245k2bswqj3escsmjss.png"></li>
+</ol>
+<p>在<code>1.zip</code>之中，我们发现里面携带了一个Python环境，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/174405dtagtqo7t9b2gjgb.png"></p>
+<p>其中，压缩包内伪装的<code>svchost.exe</code>是<code>Python 3.11.150.1013</code>解释器，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/174438t9z2w8b5va2mstv2.png"><br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/174445i6vec5ivfedd9vdz.png"></p>
+<p><code>1.bat</code>的作用是：使用压缩包内携带的Python解释器执行同目录下的<code>python.py</code>，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/174515nsxycrsjwsnv1zzm.png"></p>
+<p>该恶意软件的核心组件就是该<code>python.py</code>，我们对其进行分析。<br>进入<code>python.py</code>后，我们发现代码可能经过了混淆或最小化处理，无法直接进行阅读，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/174556ol88mcttjka9ol42.png"><br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/174612ei93whay9qe8qw89.png"></p>
+<p>样本将代码字符转换为了列表中的数字，将列表存储进<code>xlicesvaoy</code>变量中，执行时再通过以下代码还原出原先的代码并执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xlicesvaoy = &#x27;&#x27;.join([chr(int(x) - 79) for x in xlicesvaoy])  // 将列表中的数字还原为代码字符</span><br><span class="line">exec(xlicesvaoy)  // 通过exec()函数直接执行当前xlicesvaoy变量中的代码</span><br></pre></td></tr></table></figure>
+
+<p>我们将<code>xlicesvaoy</code>列表复制出来，执行<code>decoded = &#39;&#39;.join(chr(int(n)-79) for n in xlicesvaoy)</code>再将<code>decoded</code>输出或写入至文件就可以得到该Python脚本的可读代码，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/174717otz112tftvp12qt2.png"></p>
+<p>代码中的常量，如下图所示（木马后续的代码逻辑可能会见到，因此先进行展示）：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/174734jr34ifvmtl4470jm.png"></p>
+<p>进入代码后，首先最令人难忘的是一堆<code>brouwser_paths</code>，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/174801v9tai8nrgi0pt8ej.png"><br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/174808bb4cz9gr4f5okmrm.png"></p>
+<p>在此之后紧接着的是<code>class Maincookie</code>，该class下的函数会寻找浏览器和浏览器<code>User Data</code>位置，尝试使用命令行<code>taskkill /f /im ProcessName</code>的方式结束正在运行的浏览器进程；命令行参数指定User Data目录，以调试模式启动浏览器进程；提取并保存浏览器cookies，压缩为zip（获取国家和IP地址作为zip压缩包文件名）并上传发送给黑客，相关代码如下图所示：<br><img src="https://s21.ax1x.com/2025/02/14/pEKE4e0.png"></p>
+<p>之后一个<code>class Variables</code>用于初始化变量，从变量名中可以看到该后门木马会尝试获取浏览器Cookies、浏览器历史记录、浏览器文件下载记录、浏览器书签、无线局域网SSID及密码、系统信息、剪贴板内容、进程列表、一些社交软件&amp;游戏平台账号Tokens等，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/175827n1m11m8cjf9f4m1h.png"></p>
+<p><code>class SubModules</code>下的函数主要进行一些加解密操作（例如解密密码等）、创建互斥体、判断当前状态下是否具有管理员权限等，相关代码如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/175841dybhz88k3y308leh.png"></p>
+<p>接下来是<code>class StealSystemInformation</code>下的函数：</p>
+<ol>
+<li><code>GetDefaultSystemEncoding(self)</code>函数在<code>cmd.exe</code>中执行<code>chcp</code>命令获取当前系统<code>cmd</code>命令行输出内容的编码方式。</li>
+<li><code>StealSystemInformation(self)</code>函数通过命令行执行并输出<code>System Info</code>(systeminfo, 系统信息)&amp;<code>tasklist</code>(进程列表)&amp;<code>tasklist /svc</code>(进程和服务的对应关系)&amp;<code>ipconfig</code>(TCP&#x2F;IP配置的设置值)&amp;<code>ipconfig/all</code>(TCP&#x2F;IP配置的详细信息)&amp;<code>Route Table</code>(路由表)&amp;<code>route print</code>(当前路由表中的所有条目)&amp;<code>Firewallinfo</code>(防火墙信息)等。</li>
+<li><code>StealProcessInformation(self)</code>函数通过执行<code>tasklist /FO LIST</code>命令获取<code>list</code>格式的当前进程列表。</li>
+<li><code>StealLastClipBoard(self)</code>函数通过执行<code>PowerShell</code>中<code>Get-Clipboard</code>命令获取当前剪贴板内容</li>
+<li><code>StealNetworkInformation(self)</code>函数获取IP地址、国家、城市、时区、运营商</li>
+<li><code>StealWifiInformation(self)</code>函数获取本地无线局域网信息、无线局域网SSID及密码<br>相关代码如下图所示：<br><img src="https://s21.ax1x.com/2025/02/14/pEKEfLq.png"></li>
+</ol>
+<p>该木马程序的核心实现部分在<code>class Main</code>下，Main class下的变量和函数非常多，不再一一展示，Main class的结构大纲如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/181445jrdm3dlrsvnl6v1j.png"></p>
+<p>需要特别提及的是，该木马获取屏幕截图是在Main class下的<code>WriteToText(self)</code>函数下，通过执行<code>base64</code>编码过的<code>PowerShell</code>命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command = &quot;JABzAG8AdQByAGMAZQAgAD0AIABAACIADQAKAHUAcwBpAG4AZwAgAFMAeQBzAHQAZQBtADsADQAKAHUAcwBpAG4AZwAgAFMAeQBzAHQAZQBtAC4AQwBvAGwAbABlAGMAdABpAG8AbgBzAC4ARwBlAG4AZQByAGkAYwA7AA0ACgB1AHMAaQBuAGcAIABTAHkAcwB0AGUAbQAuAEQAcgBhAHcAaQBuAGcAOwANAAoAdQBzAGkAbgBnACAAUwB5AHMAdABlAG0ALgBXAGkAbgBkAG8AdwBzAC4ARgBvAHIAbQBzADsADQAKAHAAdQBiAGwAaQBjACAAYwBsAGEAcwBzACAAUwBjAHIAZQBlAG4AcwBoAG8AdAANAAoAewANAAoAIAAgACAAIABwAHUAYgBsAGkAYwAgAHMAdABhAHQAaQBjACAATABpAHMAdAA8AEIAaQB0AG0AYQBwAD4AIABDAGEAcAB0AHUAcgBlAFMAYwByAGUAZQBuAHMAKAApAA0ACgAgACAAIAAgAHsADQAKACAAIAAgACAAIAAgACAAIAB2AGEAcgAgAHIAZQBzAHUAbAB0AHMAIAA9ACAAbgBlAHcAIABMAGkAcwB0ADwAQgBpAHQAbQBhAHAAPgAoACkAOwANAAoAIAAgACAAIAAgACAAIAAgAHYAYQByACAAYQBsAGwAUwBjAHIAZQBlAG4AcwAgAD0AIABTAGMAcgBlAGUAbgAuAEEAbABsAFMAYwByAGUAZQBuAHMAOwANAAoAIAAgACAAIAAgACAAIAAgAGYAbwByAGUAYQBjAGgAIAAoAFMAYwByAGUAZQBuACAAcwBjAHIAZQBlAG4AIABpAG4AIABhAGwAbABTAGMAcgBlAGUAbgBzACkADQAKACAAIAAgACAAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAB0AHIAeQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABSAGUAYwB0AGEAbgBnAGwAZQAgAGIAbwB1AG4AZABzACAAPQAgAHMAYwByAGUAZQBuAC4AQgBvAHUAbgBkAHMAOwANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB1AHMAaQBuAGcAIAAoAEIAaQB0AG0AYQBwACAAYgBpAHQAbQBhAHAAIAA9ACAAbgBlAHcAIABCAGkAdABtAGEAcAAoAGIAbwB1AG4AZABzAC4AVwBpAGQAdABoACwAIABiAG8AdQBuAGQAcwAuAEgAZQBpAGcAaAB0ACkAKQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAdQBzAGkAbgBnACAAKABHAHIAYQBwAGgAaQBjAHMAIABnAHIAYQBwAGgAaQBjAHMAIAA9ACAARwByAGEAcABoAGkAYwBzAC4ARgByAG8AbQBJAG0AYQBnAGUAKABiAGkAdABtAGEAcAApACkADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABnAHIAYQBwAGgAaQBjAHMALgBDAG8AcAB5AEYAcgBvAG0AUwBjAHIAZQBlAG4AKABuAGUAdwAgAFAAbwBpAG4AdAAoAGIAbwB1AG4AZABzAC4ATABlAGYAdAAsACAAYgBvAHUAbgBkAHMALgBUAG8AcAApACwAIABQAG8AaQBuAHQALgBFAG0AcAB0AHkALAAgAGIAbwB1AG4AZABzAC4AUwBpAHoAZQApADsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAcgBlAHMAdQBsAHQAcwAuAEEAZABkACgAKABCAGkAdABtAGEAcAApAGIAaQB0AG0AYQBwAC4AQwBsAG8AbgBlACgAKQApADsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAfQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAfQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAYwBhAHQAYwBoACAAKABFAHgAYwBlAHAAdABpAG8AbgApAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAfQANAAoAIAAgACAAIAAgACAAIAAgAHIAZQB0AHUAcgBuACAAcgBlAHMAdQBsAHQAcwA7AA0ACgAgACAAIAAgAH0ADQAKAH0ADQAKACIAQAANAAoAQQBkAGQALQBUAHkAcABlACAALQBUAHkAcABlAEQAZQBmAGkAbgBpAHQAaQBvAG4AIAAkAHMAbwB1AHIAYwBlACAALQBSAGUAZgBlAHIAZQBuAGMAZQBkAEEAcwBzAGUAbQBiAGwAaQBlAHMAIABTAHkAcwB0AGUAbQAuAEQAcgBhAHcAaQBuAGcALAAgAFMAeQBzAHQAZQBtAC4AVwBpAG4AZABvAHcAcwAuAEYAbwByAG0AcwANAAoAJABzAGMAcgBlAGUAbgBzAGgAbwB0AHMAIAA9ACAAWwBTAGMAcgBlAGUAbgBzAGgAbwB0AF0AOgA6AEMAYQBwAHQAdQByAGUAUwBjAHIAZQBlAG4AcwAoACkADQAKAGYAbwByACAAKAAkAGkAIAA9ACAAMAA7ACAAJABpACAALQBsAHQAIAAkAHMAYwByAGUAZQBuAHMAaABvAHQAcwAuAEMAbwB1AG4AdAA7ACAAJABpACsAKwApAHsADQAKACAAIAAgACAAJABzAGMAcgBlAGUAbgBzAGgAbwB0ACAAPQAgACQAcwBjAHIAZQBlAG4AcwBoAG8AdABzAFsAJABpAF0ADQAKACAAIAAgACAAJABzAGMAcgBlAGUAbgBzAGgAbwB0AC4AUwBhAHYAZQAoACIALgAvAEQAaQBzAHAAbABhAHkAIAAoACQAKAAkAGkAKwAxACkAKQAuAHAAbgBnACIAKQANAAoAIAAgACAAIAAkAHMAYwByAGUAZQBuAHMAaABvAHQALgBEAGkAcwBwAG8AcwBlACgAKQANAAoAfQA=&quot;</span><br></pre></td></tr></table></figure>
+<p>解码后命令为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">$source = @&quot;</span><br><span class="line"></span><br><span class="line">using System;</span><br><span class="line"></span><br><span class="line">using System.Collections.Generic;</span><br><span class="line"></span><br><span class="line">using System.Drawing;</span><br><span class="line"></span><br><span class="line">using System.Windows.Forms;</span><br><span class="line"></span><br><span class="line">public class Screenshot</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    public static List&lt;Bitmap&gt; CaptureScreens()</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        var results = new List&lt;Bitmap&gt;();</span><br><span class="line"></span><br><span class="line">        var allScreens = Screen.AllScreens;</span><br><span class="line"></span><br><span class="line">        foreach (Screen screen in allScreens)</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">            try</span><br><span class="line"></span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                Rectangle bounds = screen.Bounds;</span><br><span class="line"></span><br><span class="line">                using (Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height))</span><br><span class="line"></span><br><span class="line">                &#123;</span><br><span class="line"></span><br><span class="line">                    using (Graphics graphics = Graphics.FromImage(bitmap))</span><br><span class="line"></span><br><span class="line">                    &#123;</span><br><span class="line"></span><br><span class="line">                        graphics.CopyFromScreen(new Point(bounds.Left, bounds.Top), Point.Empty, bounds.Size);</span><br><span class="line"></span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    results.Add((Bitmap)bitmap.Clone());</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            catch (Exception)</span><br><span class="line"></span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return results;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&quot;@</span><br><span class="line"></span><br><span class="line">Add-Type -TypeDefinition $source -ReferencedAssemblies System.Drawing, System.Windows.Forms</span><br><span class="line"></span><br><span class="line">$screenshots = [Screenshot]::CaptureScreens()</span><br><span class="line"></span><br><span class="line">for ($i = 0; $i -lt $screenshots.Count; $i++)&#123;</span><br><span class="line"></span><br><span class="line">    $screenshot = $screenshots[$i]</span><br><span class="line"></span><br><span class="line">    $screenshot.Save(&quot;./Display ($($i+1)).png&quot;)</span><br><span class="line"></span><br><span class="line">    $screenshot.Dispose()</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/181622inolu9u2m2mnzxl0.png"></p>
+<p><code>class UploadGoFile</code>下的<code>upload_file(file_path)</code>函数会将待上传的文件上传到<code>https://store1.gofile.io/contents/uploadfile</code>，然后获取到文件分享链接，之后程序再将文件分享链接上传发送给黑客，相关代码如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/181710e6i2n0m8200rnmli.png"></p>
+<p><code>class StealCommonFiles</code>下的函数会根据文件内容、文件大小、文件拓展名等文件特征选择性窃取文件，压缩为zip并上传发送给黑客（将国家、IP地址和文件所在驱动器号作为zip压缩包文件名），相关代码、关键词、文件拓展名，如下图所示：<br><img src="https://s21.ax1x.com/2025/02/14/pEKVsn1.png"></p>
+<p>程序在启动时会直接执行<code>Maincookie</code> <code>Main</code> class 下的函数和<code>StealCommonFiles().StealFiles()</code>，如下图所示：<br><img src="https://bbs.huorong.cn/data/attachment/forum/202502/14/181807lhlqmruulu1m9s6x.png"></p>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><p><strong>（一）恶意行为者资产</strong><br>GitHub账户：<a target="_blank" rel="noopener" href="https://github.com/nvslks">https://github.com/nvslks</a><br>相关GitHub仓库：<br><a target="_blank" rel="noopener" href="https://github.com/nvslks/g">https://github.com/nvslks/g</a> (本文分析样本)<br><a target="_blank" rel="noopener" href="https://github.com/nvslks/h">https://github.com/nvslks/h</a><br><a target="_blank" rel="noopener" href="https://github.com/nvslks/f">https://github.com/nvslks/f</a><br><a target="_blank" rel="noopener" href="https://github.com/nvslks/b">https://github.com/nvslks/b</a><br><a target="_blank" rel="noopener" href="https://github.com/nvslks/a">https://github.com/nvslks/a</a><br><a target="_blank" rel="noopener" href="https://github.com/nvslks/c">https://github.com/nvslks/c</a><br><a target="_blank" rel="noopener" href="https://github.com/nvslks/e">https://github.com/nvslks/e</a><br><a target="_blank" rel="noopener" href="https://github.com/nvslks/d">https://github.com/nvslks/d</a><br>截至本文撰写时仍然可访问。<br><strong>（二）本文分析样本Hash (SHA-256)</strong><br>Install_DeepSeek.exe - c9d815df845f5e13e8ef1142cb2dec8f97a449d639be2b38bdd75beaacff70b8<br>Bind.exe - 9d09a10bfa2aeb89aba5e20e88fb4fc1f56392d859d0592db66221a9f00000c4<br>g.bat - 25696f0af2570b4ab6013ff7dcb6995dcfaff31323ad05b268a680a2411ccf0a<br>1.bat - 1003d1b243a01a0a518491d0af6c67e33b8d904762b5de167b39acec05ca46f4<br>python.py - f6d47d223401627eb4978b7582368854d271d6446b3137dac5ce99cb46efd886</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://wwwab123.github.io">wwwab</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://wwwab123.github.io/posts/3265751015.html">https://wwwab123.github.io/posts/3265751015.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="undefined" target="_blank">undefined</a> 许可协议。转载请注明来自 <a href="https://wwwab123.github.io" target="_blank">wwwab的小站</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/picture/23.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://lib.baomitu.com/social-share.js/1.0.16/css/share.min.css" media="print" onload="this.media='all'"><script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/1500196612.html" title="警惕，后门病毒签署有效数字签名驱动对抗防病毒软件"><img class="cover" src="/picture/1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">警惕，后门病毒签署有效数字签名驱动对抗防病毒软件</div></div></a></div><div class="next-post pull-right"><a href="/posts/1243066710.html" title="Hello World"><img class="cover" src="/picture/15.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/png.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">wwwab</div><div class="author-info__description">欢迎来到wwwab的小站</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/wwwab123"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/wwwab123" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://pd.qq.com/s/gmmepmvid" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">样本分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%84%E5%BD%95"><span class="toc-number">3.</span> <span class="toc-text">附录</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/0.html" title="无题"><img src="/picture/21.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/posts/0.html" title="无题">无题</a><time datetime="2025-02-15T06:47:51.052Z" title="发表于 2025-02-15 14:47:51">2025-02-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1243066710.html" title="Hello World"><img src="/picture/15.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/posts/1243066710.html" title="Hello World">Hello World</a><time datetime="2025-02-15T06:47:51.052Z" title="发表于 2025-02-15 14:47:51">2025-02-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3265751015.html" title="警惕，黑客借助DeepSeek热潮投放后门木马窃取用户密码"><img src="/picture/23.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="警惕，黑客借助DeepSeek热潮投放后门木马窃取用户密码"/></a><div class="content"><a class="title" href="/posts/3265751015.html" title="警惕，黑客借助DeepSeek热潮投放后门木马窃取用户密码">警惕，黑客借助DeepSeek热潮投放后门木马窃取用户密码</a><time datetime="2025-02-14T04:00:00.000Z" title="发表于 2025-02-14 12:00:00">2025-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1500196612.html" title="警惕，后门病毒签署有效数字签名驱动对抗防病毒软件"><img src="/picture/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="警惕，后门病毒签署有效数字签名驱动对抗防病毒软件"/></a><div class="content"><a class="title" href="/posts/1500196612.html" title="警惕，后门病毒签署有效数字签名驱动对抗防病毒软件">警惕，后门病毒签署有效数字签名驱动对抗防病毒软件</a><time datetime="2023-08-20T04:00:00.000Z" title="发表于 2023-08-20 12:00:00">2023-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3773179943.html" title="重磅，假冒 Google Chrome 安装程序（携带有效数字签名）劫持用户浏览器主页"><img src="/picture/27.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="重磅，假冒 Google Chrome 安装程序（携带有效数字签名）劫持用户浏览器主页"/></a><div class="content"><a class="title" href="/posts/3773179943.html" title="重磅，假冒 Google Chrome 安装程序（携带有效数字签名）劫持用户浏览器主页">重磅，假冒 Google Chrome 安装程序（携带有效数字签名）劫持用户浏览器主页</a><time datetime="2023-05-27T04:00:00.000Z" title="发表于 2023-05-27 12:00:00">2023-05-27</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By wwwab</div><div class="footer_custom_text">Thank you for your visit</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js"></script><div class="js-pjax"></div><script async src="/js/title.js"></script><script async src="/js/sakura.js"></script><script async src="/js/fps.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '1s');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '2');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --></body></html>
