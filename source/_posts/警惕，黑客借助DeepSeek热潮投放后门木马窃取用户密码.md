@@ -178,7 +178,7 @@ for ($i = 0; $i -lt $screenshots.Count; $i++){
 }
 ```
 如下图所示：
-![](https://bbs.huorong.cn/data/attachment/forum/202502/14/181622inolu9u2m2mnzxl0.png)
+![](https://bbs.huorong.cn/data/attachment/forum/202502/14/181622inolu9u2m2mnzxl0.jpg)
 
 `class UploadGoFile`下的`upload_file(file_path)`函数会将待上传的文件上传到`https://store1.gofile.io/contents/uploadfile`，然后获取到文件分享链接，之后程序再将文件分享链接上传发送给黑客，相关代码如下图所示：
 ![](https://bbs.huorong.cn/data/attachment/forum/202502/14/181710e6i2n0m8200rnmli.png)
