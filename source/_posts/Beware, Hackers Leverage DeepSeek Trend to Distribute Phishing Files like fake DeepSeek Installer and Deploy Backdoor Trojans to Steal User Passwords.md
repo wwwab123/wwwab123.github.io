@@ -13,7 +13,7 @@ During our routine sample patrol, we discovered a suspicious sample named `Insta
 This sample masquerades under the DeepSeek icon, has no valid digital signature, and its pdb path is `C:\Users\Administrator\source\repos\Bind\Bind\obj\Release\Bind.pdb` which raised our alert and suspicion, as illustrated in the following image:
 ![](https://bbs.huorong.cn/data/attachment/forum/202502/14/172651we9eesxh1uae7eus.png)
 
-After analysis, we confirmed that this sample downloads multi-layer scripts and downloaders from a hacker's GitHub repository, utilizing nested downloads. Ultimately, it obtains a malicious script written in Python for executing backdoor actions and stealing passwords. As of the writing of this report, this Python script was first uploaded to the VirusTotal multi-engine scanning platform, where it registered a static detection rate of %, as shown in the image below:
+After analysis, we confirmed that this sample downloads multi-layer scripts and downloaders from a hacker's GitHub repository, utilizing nested downloads. Ultimately, it obtains a malicious script written in Python for executing backdoor actions and stealing passwords. As of the writing of this report, this Python script was first uploaded to the VirusTotal multi-engine scanning platform, where it showed a static detection rate of 0%, as shown in the image below:
 ![](https://bbs.huorong.cn/data/attachment/forum/202502/14/173519r1qwnwz9uwtb3iiu.png)
 
 Additionally, we found that the hacker's GitHub account hosts multiple similar repositories, all of which uploaded malware several months or weeks ago, as demonstrated in the following image:
