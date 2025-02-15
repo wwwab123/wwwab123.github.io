@@ -1,6 +1,6 @@
 ---
 title: Beware, Hackers Leverage DeepSeek Trend to Distribute Phishing Files like fake DeepSeek Installer and Deploy Backdoor Trojans to Steal User Passwords
-date: 2023-05-27 12:00:00
+date: 2025-02-14 12:00:00
 tags:
 ---
 
